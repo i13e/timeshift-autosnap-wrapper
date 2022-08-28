@@ -1,17 +1,9 @@
 # timeshift-autosnap-wrapper
-Timeshift auto-snapshot wrapper script which runs before package upgrade using Pacman hook, **preventing multiple snapshots when using AUR helpers. Run `autosnap-wrapper` to perform an update with the wrapper.**
+This is a timeshift-autosnap wrapper script which runs before package upgrade using a Pacman hook, **preventing multiple snapshots when combining timeshift-autosnap with AUR helpers. Run `autosnap-wrapper` to perform a system update with the wrapper.**
 
 ### Supported AUR Helpers
 *  Paru
 *  Yay
-
-### Features
-*  Creates Timeshift snapshots with unique comment.
-*  Deletes old snapshots which are created using this script.
-*  Auto generates grub if grub-btrfs package is installed.
-*  Can be manually executed by running `timeshift-autosnap` command with elevated privileges.
-*  Autosnaphot can be temporarily skipped by setting SKIP_AUTOSNAP environment variable (e.g. `sudo SKIP_AUTOSNAP= pacman -Syu`)
-*  **Takes only one snapshot when using AUR helpers yay and paru**
 
 ### /etc/timeshift-autosnap.conf options
 *  `skipAutosnap` - if set to **true** script won't be executed.
@@ -47,4 +39,4 @@ is defined; otherwise timeshift-autosnap is invoked normally without modificatio
 the one you intend to use (in lowercase).
 
 ### Contribution
-*  All new ideas and contributons are welcome! I'd appreciate any suggestions which make this patch easier to use.
+*  All new ideas and contributons are welcome! I'd appreciate any suggestions which make this patch easier to use or implement additional AUR helpers.
