@@ -5,6 +5,14 @@ This is a timeshift-autosnap wrapper script which runs before package upgrade us
 *  Paru
 *  Yay
 
+### Features
+*  Creates Timeshift snapshots with unique comment.
+*  Deletes old snapshots which are created using this script.
+*  Auto generates grub if grub-btrfs package is installed.
+*  Can be manually executed by running `timeshift-autosnap` command with elevated privileges.
+*  Autosnaphot can be temporarily skipped by setting SKIP_AUTOSNAP environment variable (e.g. `sudo SKIP_AUTOSNAP= pacman -Syu`)
+*  **Takes only one snapshot when using AUR helpers yay and paru**
+
 ### /etc/timeshift-autosnap.conf options
 *  `skipAutosnap` - if set to **true** script won't be executed.
 *  `deleteSnapshots` - if set to **false** old snapshots won't be deleted.
